@@ -40,7 +40,7 @@ jobs:
         run: npm install
 
       - name: Run Kong migrations
-        run: kong migrations bootstrap --force
+        run: sudo kong migrations bootstrap --force
 
       - name: Look up build cache
         uses: actions/cache@v2
@@ -52,7 +52,7 @@ jobs:
           key: cache-key-v1
 
       - name: Start Kong
-        run: kong start
+        run: sudo kong start
 
       - name: Run test
         run: test.sh
