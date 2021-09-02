@@ -52,7 +52,7 @@ jobs:
           key: cache-key-v1
 
       - name: Start Kong
-        run: sudo kong start -C kong.custom.conf
+        run: sudo kong start -c kong.custom.conf
 
       - name: Set Kong service/route
         run: |
