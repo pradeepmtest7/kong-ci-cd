@@ -45,11 +45,11 @@ jobs:
       - name: Look up build cache
         uses: actions/cache@v2
         id: cache-deps
-        key: cache-key-v1
         with:
           path: |
             kong.*.deb
             node_modules/
+          key: cache-key-v1
 
       - name: Start Kong
         run: kong start
