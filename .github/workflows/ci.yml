@@ -55,4 +55,4 @@ jobs:
         run: sudo kong start
 
       - name: Run test
-        run: test.sh
+        run: bash test.sh
