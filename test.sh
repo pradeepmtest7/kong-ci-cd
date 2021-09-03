@@ -9,7 +9,7 @@ stop_server() {
 curl http://localhost:8000/api
 code="$?"
 
-if [ "$code" -ne "0" ]; then
+if [[ ! $code -eq 0 ]]; then
   stop_server
   echo "FAIL CODE $code";
   exit $code;
