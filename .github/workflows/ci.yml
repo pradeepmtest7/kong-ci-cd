@@ -1,4 +1,4 @@
-name: Build & Test
+name: Test
 
 on: [push, pull_request]
 
@@ -6,11 +6,6 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-20.04
-
-    env:
-      KONG_TEST_PG_DATABASE: kong
-      KONG_TEST_PG_USER: kong
-      KONG_TEST_DATABASE: postgres
 
     services:
       postgres:
