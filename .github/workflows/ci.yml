@@ -26,12 +26,12 @@ jobs:
         with:
           node-version: "14"
 
-      - name: "Install Kong"
+      - name: Install Kong
         run: |
           curl -Lo kong.2.5.0.amd64.deb "https://download.konghq.com/gateway-2.x-ubuntu-$(lsb_release -cs)/pool/all/k/kong/kong_2.5.0_amd64.deb"
           sudo dpkg -i kong.2.5.0.amd64.deb
 
-      - name: "Install Node dependencies"
+      - name: Install Node dependencies
         run: npm install
 
       - name: Run Kong migrations
