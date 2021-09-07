@@ -19,4 +19,5 @@ jobs:
           script: |
             cd ~/path/to/project
             git pull git@github.com:project/home.git
+            kong stop
             kong start -c kong.custom.conf
