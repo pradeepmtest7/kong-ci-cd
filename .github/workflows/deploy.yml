@@ -1,0 +1,22 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Deploy
+
+    steps:
+      - name: Execute SSH commands
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.KEY }}
+          script: |
+            cd ~/path/to/project
+            git pull git@github.com:project/home.git
+            kong start -c kong.custom.conf
