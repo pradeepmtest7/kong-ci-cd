@@ -6,7 +6,7 @@ sleep 3 # give server time to boot
 stop_server() {
   pgrep node | xargs kill
 }
-curl http://localhost:8000/api
+curl http://18.212.174.60:9001/api
 code="$?"
 
 if [[ ! $code -eq 0 ]]; then
