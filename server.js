@@ -5,5 +5,5 @@ server.get("/", (req, res) => {
   res.status(200).send("Hello, world from kapstone!");
 });
 server.listen(port, () => {
-  console.log(`Server is listening on http://18.212.174.60:${port}`);
+  console.log(`Server is listening on http://localhost:${port}`);
 });
