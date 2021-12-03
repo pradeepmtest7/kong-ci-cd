@@ -51,8 +51,8 @@ jobs:
 
       - name: Set Kong service/route
         run: |
-          curl -X POST -H 'Content-Type: application/json' http://18.212.174.60:8001/services -d '{"name":"node-server", "protocol": "http", "host":"localhost", "port": 3000}'
-          curl -X POST -H 'Content-Type: application/json' http://18.212.174.60:8001/routes -d '{"name":"api-route", "service": { "name": "node-server" }, "paths":["/api"]}'
+          curl -X POST -H 'Content-Type: application/json' http://localhost:8001/services -d '{"name":"node-server", "protocol": "http", "host":"localhost", "port": 3000}'
+          curl -X POST -H 'Content-Type: application/json' http://localhost:8001/routes -d '{"name":"api-route", "service": { "name": "node-server" }, "paths":["/api"]}'
 
       - name: Run test
         run: bash test.sh
