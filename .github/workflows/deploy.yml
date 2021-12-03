@@ -4,14 +4,12 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+
 
 jobs:
   test:
-    runs-on: ubuntu-20.04
     name: Deploy
+
 
     steps:
       - name: Execute SSH commands
@@ -22,6 +20,6 @@ jobs:
           key: ${{ secrets.KEY }}
           script: |
             cd ~/path/to/project
-            git pull git@github.com:project/home.git
+            git pull git@github.com:pradeepmtest7/kong-ci-cd
             kong stop
             kong start -c kong.custom.conf
