@@ -7,7 +7,7 @@ on:
 
 jobs:
   test:
-    runs-on: self-hosted 
+    runs-on: Amazon Linux 2
     name: Deploy
 
     steps:
