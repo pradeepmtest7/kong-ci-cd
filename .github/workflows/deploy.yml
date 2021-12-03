@@ -8,12 +8,12 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     name: Deploy
 
 
     steps:
-      - name: Execute SSH commands
+      - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
